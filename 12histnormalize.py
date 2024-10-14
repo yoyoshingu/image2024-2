@@ -7,7 +7,7 @@ hist = cv2.calcHist([img], [0], None, [256], [0,255])
 plt.plot(hist)
 plt.show()
 
-img_norm = ((img - img.min() * 255)   / (img.max() - img.min()))
+img_norm = ((img - img.min() * 255.0)   / (img.max() - img.min()))
 
 img_normcv = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX)
 
